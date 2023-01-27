@@ -36,6 +36,6 @@ class Solution:
 s = Solution()
 
 
-print(s.generatePascal(10))
+print(s.generatePascal(100))
 
 
