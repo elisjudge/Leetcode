@@ -86,5 +86,3 @@ for i in inputs2:
 LL2.print_list()
 LL2.reverse_list()
 LL2.print_list()
-
-
