@@ -1,8 +1,6 @@
 class Solution:
     def __init__(self) -> None:
         pass
-
-
     
     def nextGreaterElement1(self, nums1: list[int], nums2: list[int]) -> list[int]:
         """
