@@ -129,3 +129,37 @@ dmypy.json
 .pyre/
 
 /inProgress
+
+# Ignore Visual Studio files
+*.sln        # Solution files
+.vs/         # Visual Studio folder (user-specific settings)
+*.user       # User-specific project files
+*.suo        # Solution user options
+
+
+# General ignores
+*.log        # Log files
+.DS_Store    # macOS metadata
+Thumbs.db    # Windows metadata
+
+# Python
+/Python/__pycache__/
+/Python/*.pyc
+
+# JavaScript
+/JavaScript/node_modules/
+/JavaScript/*.log
+
+# C
+/C/*.exe
+/C/*.o
+/C/*.out
+
+# CSharp
+/CSharp/bin/
+/CSharp/obj/
+/CSharp/*.user
+/CSharp/*.suo
+/CSharp/*.log
+
+Leetcode.sln
