@@ -1,1 +1,1 @@
-*.sql linguist-language=SQL
+/SQL/*.sql linguist-language=SQL
