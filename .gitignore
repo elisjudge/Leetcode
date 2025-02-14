@@ -163,3 +163,6 @@ Thumbs.db    # Windows metadata
 /CSharp/*.log
 
 Leetcode.sln
+
+# Ignore Stats
+/stats
