@@ -47,7 +47,7 @@ class Solution:
 s= Solution()
 
 testcases = [
-    # {"n": 10, "expected": 182},
+    {"n": 10, "expected": 182},
     {"n": 37, "expected": 1478},
     {"n": 45, "expected": 3503},
     {"n": 55, "expected": 6528},
