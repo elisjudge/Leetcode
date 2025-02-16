@@ -1,17 +1,10 @@
-class Solution1:
-    def __init__(self) -> None:
-        pass
-
-    def lengthOfLastWord(self, s: str) -> int:
+class Solution:
+    def lengthOfLastWordCheat(self, s: str) -> int:
         """
         Easy cheating solution using str.split()
         """
         strList = s.split()
         return len(strList[-1])
-
-class Solution2:
-    def __init__(self) -> None:
-        pass
 
     def lengthOfLastWord(self, s: str) -> int:
         """
@@ -35,21 +28,24 @@ class Solution2:
         return length
         
         
+s = Solution()
 
-s1 = "Hello World"
-s2 = "   fly me   to   the moon  "
-s3 = "luffy is still joyboy"
+testcases = [
+    {"s": "Hello World", "expected": 5},
+    {"s": "   fly me   to   the moon  ", "expected": 4},
+    {"s": "luffy is still joyboy", "expected": 6}
+]
 
-sol1 = Solution1()
-sol2 = Solution2()
+for i, testcase in enumerate(testcases):
+    output1 = s.lengthOfLastWordCheat(testcase["s"])
+    output2 = s.lengthOfLastWord(testcase["s"])
 
-
-print("Solution 1")
-print(sol1.lengthOfLastWord(s1))
-print(sol1.lengthOfLastWord(s2))
-print(sol1.lengthOfLastWord(s3))
-print()
-print("Solution 2")
-print(sol2.lengthOfLastWord(s1))
-print(sol2.lengthOfLastWord(s2))
-print(sol2.lengthOfLastWord(s3))
+    if output1 == testcase["expected"]:
+        print(f"Test Case {i} Passed. Expected: {testcase['expected']}, Result (Cheating): {output1}")
+    else:
+        print(f"Test Case {i} Failed. Expected: {testcase['expected']}, Result (Cheating): {output1}")
+    
+    if output2 == testcase["expected"]:
+        print(f"Test Case {i} Passed. Expected: {testcase['expected']}, Result (Proper): {output2}")
+    else:
+        print(f"Test Case {i} Failed. Expected: {testcase['expected']}, Result (Proper): {output2}")
