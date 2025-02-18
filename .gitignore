@@ -156,11 +156,11 @@ Thumbs.db    # Windows metadata
 /C/*.out
 
 # CSharp
-/CSharp/bin/
-/CSharp/obj/
-/CSharp/*.user
-/CSharp/*.suo
-/CSharp/*.log
+/CS/bin/
+/CS/obj/
+/CS/*.user
+/CS/*.suo
+/CS/*.log
 
 Leetcode.sln
 
