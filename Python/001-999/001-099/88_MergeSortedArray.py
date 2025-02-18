@@ -1,8 +1,4 @@
 class Solution:
-    
-    def __init__(self) -> None:
-        pass
-    
     def merge(self, nums1: list[int], m: int, nums2: list[int], n: int) -> None:
         """
         Do not return anything, modify nums1 in-place instead.
@@ -23,15 +19,19 @@ class Solution:
             n -= 1
             end -= 1
 
-        print(nums1)
-
-
-numsA1, m1, numsB1, n1 = [1,2,3,0,0,0], 3, [2,5,6],  3
-numsA2, m2, numsB2, n2 = [1], 1, [], 0
-numsA3, m3, numsB3, n3 = [0], 0, [1], 1            
-
 s = Solution()
 
-s.merge(numsA1, m1, numsB1, n1)
-s.merge(numsA2, m2, numsB2, n2)
-s.merge(numsA3, m3, numsB3, n3)
+testCases = [
+    {"nums1": [1,2,3,0,0,0], "m": 3, "nums2": [2,5,6], "n": 3, "expected": [1,2,2,3,5,6]},
+    {"nums1": [1], "m": 1, "nums2": [], "n": 0, "expected": [1]},
+    {"nums1": [0], "m": 0, "nums2": [1], "n": 1, "expected": [1]},
+]
+
+for i, testcase in enumerate(testCases):
+    output = testcase["nums1"] 
+    s.merge(output, testcase["m"], testcase["nums2"], testcase["n"])
+    
+    if output == testcase["expected"]:
+        print(f"Test Case {i} Passed. Expected: {testcase['expected']}, Result: {output}")
+    else:
+        print(f"Test Case {i} Failed. Expected: {testcase['expected']}, Result: {output}")

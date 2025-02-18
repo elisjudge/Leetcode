@@ -1,8 +1,4 @@
 class Solution:
-
-    def __init__(self) -> None:
-        pass
-
     def removeElement(self, nums: list[int], val: int) -> int:
         k = 0
 
@@ -12,16 +8,17 @@ class Solution:
                 k +=1
         return k
 
-
-
-nums1, val1 = [3,2,2,3], 3
-nums2, val2 = [0,1,2,2,3,0,4,2], 2
-
-
-
 s= Solution()
-print(s.removeElement(nums1, val1))
-print(s.removeElement(nums2, val2))
 
+testcases = [
+    {"nums": [3,2,2,3], "val": 3, "expected": 2},
+    {"nums": [0,1,2,2,3,0,4,2], "val": 2, "expected": 5}
+]
 
+for i, testcase in enumerate(testcases):
+    output = s.removeElement(testcase["nums"], testcase["val"])
 
+    if output == testcase["expected"]:
+        print(f"Test Case {i} Passed. Expected: {testcase['expected']}, Result: {output}")
+    else:
+        print(f"Test Case {i} Failed. Expected: {testcase['expected']}, Result: {output}")
